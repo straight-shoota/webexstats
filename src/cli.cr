@@ -24,8 +24,6 @@ end
 stats = Webexstats.new
 stats.parse(content)
 
-p! stats.questions
-
 if filename_out
   File.open(filename_out, "w") do |file|
     byte_slice = to_utf16(stats.to_csv.to_utf16)

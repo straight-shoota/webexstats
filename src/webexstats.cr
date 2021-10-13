@@ -96,7 +96,6 @@ class Webexstats
 
   def parse_vote(line)
     fields = line[0..-2].split(" | ")
-    p! fields
     label = fields.shift
 
     Vote.new(label, fields)
